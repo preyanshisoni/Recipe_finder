@@ -1,0 +1,149 @@
+
+.recipe-card {
+  background: #ffffff;
+  border: 1px solid #f1e9df;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Image */
+
+.recipe-card__image-wrapper {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recipe-card:hover .recipe-card__image {
+  transform: scale(1.06);
+}
+
+/* Favorite Button */
+
+.recipe-card__favorite {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  color: #57534e;
+}
+
+/* Difficulty */
+
+.recipe-card__difficulty {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  background: white;
+  color: #ea580c;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Content */
+
+.recipe-card__content {
+  padding: 20px;
+}
+
+.recipe-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.recipe-card__cuisine {
+  color: #ea580c;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.recipe-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #e99b19;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.recipe-card__title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  line-height: 1.35;
+  min-height: 54px;
+  margin-bottom: 16px;
+}
+
+/* Metadata */
+
+.recipe-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: #78716c;
+  font-size: 12px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f1e9df;
+}
+
+.recipe-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Button */
+
+.recipe-card__button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #fff1e6;
+  color: #ea580c;
+
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.recipe-card__button:hover {
+  background: #f97316;
+  color: white;
+}

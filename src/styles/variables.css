@@ -1,0 +1,29 @@
+
+:root {
+  /* Brand Colors */
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+
+  /* Background */
+  --color-background: #fffcf7;
+  --color-surface: #ffffff;
+
+  /* Text */
+  --color-heading: #292524;
+  --color-text: #57534e;
+  --color-muted: #78716c;
+
+  /* Borders */
+  --color-border: #f1e9df;
+
+  /* Effects */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+  --container-width: 1280px;
+
+  /* Radius */
+  --radius-card: 16px;
+  --radius-button: 999px;
+}

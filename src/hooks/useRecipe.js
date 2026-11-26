@@ -3,12 +3,17 @@ import RecipeServices from "../services/RecipeServices";
 
 function useRecipe() {
   const [recipe, setRecipe] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [recipeById, setRecipeById] = useState([]);
+
   const [error, setError] = useState("");
+  const [errorById, setErrorById] = useState("");
+  
+  const [loading, setLoading] = useState(false);
+  const [loadingById, setLoadingById] = useState(false);
 
   const fetchRecipe = async () => {
     try {
-      setLoading(false);
+      setLoading(true);
       setError("");
       const response = await RecipeServices.getRecipes();
       setRecipe(response.recipes);
@@ -19,6 +24,22 @@ function useRecipe() {
       setLoading(false);
     }
   };
+
+  const fetchRecipeById = async (id)=>{
+    try{
+      setLoadingById(true);
+      setError("");
+      const response = await RecipeServices.getRecipeById(id);
+      console.log("response of getbyId", response);
+      setRecipeById(response);
+    }catch(error){
+      setErrorById("Failed to fetch error");
+      console.log(error);
+    }
+    finally{
+      setLoadingById(false);
+    }
+  }
   useEffect(() => {
     fetchRecipe();
   }, []);
@@ -28,6 +49,10 @@ function useRecipe() {
     loading,
     error,
     fetchRecipe,
+    fetchRecipeById,
+    loadingById,
+    recipeById,
+    errorById
   };
 }
 export default useRecipe;

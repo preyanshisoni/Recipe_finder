@@ -1,3 +1,4 @@
+import Loading from "../../components/Loading/Loading";
 import Navbar from "../../components/Navbar/Navbar";
 import RecipeCard from "../../components/RecipeCard/RecipeCard";
 import useRecipe from "../../hooks/useRecipe";
@@ -8,13 +9,12 @@ function Home() {
   const {recipe, loading, error} = useRecipe();
 
   if (loading) {
-    return <div className="recipe-status">Loading recipes...</div>;
+    return <Loading text="recipes"/>
   }
 
   if (error) {
     return <div className="recipe-status recipe-error">{error}</div>;
   }
-
   return<>
     <Navbar/>
     <section className="recipes-section">
@@ -43,9 +43,7 @@ function Home() {
           ))}
         </div>
       )}
-
     </section>
     </>
 }
-
 export default Home;
